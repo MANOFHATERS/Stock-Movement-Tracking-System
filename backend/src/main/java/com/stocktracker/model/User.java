@@ -1,0 +1,34 @@
+package com.stocktracker.model;
+
+import lombok.AllArgsConstructor;
+import lombok.Builder;
+import lombok.Data;
+import lombok.NoArgsConstructor;
+import org.springframework.data.annotation.Id;
+import org.springframework.data.mongodb.core.mapping.Document;
+import java.time.LocalDateTime;
+
+@Document(collection = "users")
+@Data
+@Builder
+@NoArgsConstructor
+@AllArgsConstructor
+public class User {
+    
+    @Id
+    private String id;
+    
+    private String email;
+    
+    private String name;
+    
+    private String avatarUrl;
+    
+    private String provider; // google, github
+    
+    private String providerId;
+    
+    private LocalDateTime createdAt;
+    
+    private LocalDateTime lastLoginAt;
+}

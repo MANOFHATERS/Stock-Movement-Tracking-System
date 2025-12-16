@@ -1,0 +1,37 @@
+server:
+  port: 8080
+
+spring:
+  application:
+    name: stock-tracker
+  
+  data:
+    mongodb:
+      uri: mongodb+srv://stockadmin:manoj%402006@stocktracker-cluster.nojx0ag.mongodb.net/stocktracker?retryWrites=true&w=majority
+      database: stocktracker
+  
+  security:
+    oauth2:
+      client:
+        registration:
+          google:
+            client-id: 1098646892118-oodscrrss2a141m5r53cjt1c0nounuan.apps.googleusercontent.com
+            client-secret: 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
+            scope:
+              - email
+              - profile
+          github:
+            client-id: Ov23li1zhKKLdwIIPDtt
+            client-secret: b790f136f11eb316d185d377b8e41265b7dcdc14
+            scope:
+              - user:email
+              - read:user
+
+app:
+  cors:
+    allowed-origins: http://localhost:5173,http://localhost:3000
+  frontend-url: http://localhost:5173
+
+logging:
+  level:
+    org.springframework.security: DEBUG
