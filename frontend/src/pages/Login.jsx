@@ -31,25 +31,23 @@ const Login = () => {
                 </p>
 
                 <div className="oauth-buttons">
-                    <motion.button
+                    <a
+                        href="/oauth2/authorization/google"
                         className="oauth-btn google"
-                        onClick={loginWithGoogle}
-                        whileHover={{ scale: 1.02 }}
-                        whileTap={{ scale: 0.98 }}
+                        onClick={(e) => { e.preventDefault(); window.location.href = '/oauth2/authorization/google'; }}
                     >
                         <FcGoogle className="oauth-icon" />
                         Continue with Google
-                    </motion.button>
+                    </a>
 
-                    <motion.button
+                    <a
+                        href="/oauth2/authorization/github"
                         className="oauth-btn github"
-                        onClick={loginWithGithub}
-                        whileHover={{ scale: 1.02 }}
-                        whileTap={{ scale: 0.98 }}
+                        onClick={(e) => { e.preventDefault(); window.location.href = '/oauth2/authorization/github'; }}
                     >
                         <FaGithub className="oauth-icon" />
                         Continue with GitHub
-                    </motion.button>
+                    </a>
                 </div>
 
                 <div className="login-divider">

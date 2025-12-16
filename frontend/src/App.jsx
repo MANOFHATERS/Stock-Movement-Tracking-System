@@ -74,9 +74,13 @@ function App() {
                     )}
 
                     {!user && (
-                        <Link to="/" className="btn btn-primary btn-sm">
+                        <a
+                            href="/oauth2/authorization/google"
+                            className="btn btn-primary btn-sm"
+                            onClick={(e) => { e.preventDefault(); window.location.href = '/oauth2/authorization/google'; }}
+                        >
                             Sign In
-                        </Link>
+                        </a>
                     )}
                 </div>
             </nav>
