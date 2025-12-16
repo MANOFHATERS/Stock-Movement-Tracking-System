@@ -196,7 +196,7 @@ Stock-Movement-Tracking-System/
 │   └── 📄 vite.config.js       # Vite configuration
 │
 ├── 📄 README.md
-└── 📄 PRESENTATION_CONTENT.txt
+└── � screenshots/          # Application screenshots
 ```
 
 ---
@@ -287,17 +287,27 @@ Stock-Movement-Tracking-System/
 ### Login Page
 Modern dark theme with Google and GitHub OAuth options.
 
+![Login Page](screenshots/login.png)
+
 ### Dashboard
 Overview with statistics cards, quick actions, and recent products.
+
+![Dashboard](screenshots/dashboard.png)
 
 ### Products Page
 Product list with stock levels, search, and management actions.
 
+![Products Page](screenshots/products.png)
+
 ### Stock History
 Timeline view showing complete movement history for each product.
 
+![Stock History](screenshots/stock-history.png)
+
 ### Orders Page
 Order management with creation and cancellation capabilities.
+
+![Orders Page](screenshots/orders.png)
 
 ---
 
