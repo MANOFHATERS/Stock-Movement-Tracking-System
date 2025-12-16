@@ -48,9 +48,9 @@ export const AuthProvider = ({ children }) => {
 
     const logout = async () => {
         try {
-            await axios.post('/api/auth/logout', {}, { withCredentials: true })
             setUser(null)
-            window.location.href = '/'
+            // Use Spring Security's logout endpoint which properly invalidates session
+            window.location.href = '/logout'
         } catch (error) {
             console.error('Logout error:', error)
         }
